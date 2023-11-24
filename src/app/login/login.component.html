@@ -1,0 +1,22 @@
+<div class="login-container d-flex flex-column align-items-center justify-content-center mt-5">
+    <p class="title mb-5">IComida</p>
+    <h2 class="sub-title">Login</h2>
+    <form (ngSubmit)="login.form.valid && onSubmit()" #login="ngForm">
+        <div class="card border-0 shadow align-items-center justify-content-center pt-3 mt-5 px-5">
+            <div class="form-group">
+                <p class="bold mt-3 mb-1">Email</p>
+                <input class="rounded-pill border text-center" type="email" name="email" [(ngModel)]="email" required placeholder="Insira aqui seu email"/>
+                <p class="font-weight-bold mt-3 mb-1">Senha</p>
+                <input class="rounded-pill border text-center" type="password" name="password" [(ngModel)]="password" required placeholder="Insira aqui sua senha"/>
+            </div>
+            <div class="d-flex flex-column text-left m-3 p-2">
+                <a class="text-decoration-none text-reset" routerLink="/create">Crie sua conta</a>
+                <a class="text-decoration-none text-reset" routerLink="/forgot" >Esqueceu sua senha?</a>
+            </div>
+        
+            <button type="submit" class="btn btn-danger rounded-pill mb-4">
+                Login
+            </button>
+        </div>
+    </form>
+</div>
