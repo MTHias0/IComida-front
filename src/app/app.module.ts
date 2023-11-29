@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { CreateComponent } from './create/create.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -15,7 +19,11 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    CreateComponent,
+    ForgotComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

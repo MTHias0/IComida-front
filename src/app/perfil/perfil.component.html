@@ -1,0 +1,50 @@
+<div class="container border-0 rounded d-flex flex-column align-items-center justify-content-center mt-5 py-5">
+    <p class="title mb-5">Informações de perfil</p>
+    <div *ngFor="let user of users" class="col-md-3 products-container">
+        <div *ngIf="!editMode" class="card border border-dark rounded shadow align-items-start justify-content-center pt-3 mt-1 p-1">
+            <div class="info-container m-3">
+                <p>Name: {{user.nome}}</p>
+                <p>password: *******</p>
+                <p>Email: {{user.email}} </p>
+                <p>Telefone: {{user.telNumber}} </p>
+                <p>Endereço: {{user.endereco}} </p>
+            </div>
+        </div>
+
+        <div *ngIf="editMode">
+            <div class="info-container m-3">
+                <div class="bg-white border border-dark pt-3 rounded row">
+                    <p>
+                        Nome:
+                        <input class="border rounded" type="text" [(ngModel)]="user.nome" />
+                    </p>
+                    <p>
+                        Email:
+                        <input class="border rounded" type="text" [(ngModel)]="user.email" />
+                    </p>
+                    <p>
+                        Password:
+                        <input class="border rounded" type="text" [(ngModel)]="user.password" />
+                    </p>
+                    <p>
+                        Telefone:
+                        <input class="border rounded" type="text" [(ngModel)]="user.telNumber" />
+                    </p>
+                    <p>
+                        Endereço:
+                        <input class="border rounded" type="text" [(ngModel)]="user.endereco" />
+                    </p>
+                </div>
+                <div class="buttons mt-4 px-2 ">
+                    <button (click)="onCancel()" class="m-1 btn btn-danger">Cancelar edição</button>
+                    <button routerLink="" class="btn btn-primary" > Atualizar perfil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row buttons align-items-center mt-4">
+        <button  *ngIf="!editMode" (click)="editActive()" class="rounded-pill btn btn-primary mb-3 mt-5 ">Editar perfil</button>
+        <button class="rounded-pill btn btn-danger" routerLink="/login">Sair da conta</button>
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="home-container d-flex flex-column align-items-center justify-content-center mt-5">
+    <p class="title mb-5">Cardápio</p>
+    <div class="row">
+        <button type="button" class="btn btn-danger">Todos</button>
+        <button type="button" class="btn btn-secondary">Refeições</button>
+        <button type="button" class="btn btn-secondary">Bebidas</button>
+        <button type="button" class="btn btn-secondary">Sobremesas</button>
+    </div>
+    <input class="rounded-pill fw-bold text-center my-5" placeholder="Pesquisar" type="text"/>
+    <div class="row mb-5 mx-4">
+        <div *ngFor="let product of products" class="col-md-3 products-container">
+            <div class="card border-0 shadow align-items-center justify-content-center pt-3 mt-1 p-1">
+                <img class="rounded" [src]="product.image">
+                <p class="text-center mt-2 fw-bold str text-danger" >R${{product.preco}}.00</p>
+                <p class="description text-center">{{product.descricao}}</p>
+            </div>
+        </div>
+    </div>
+</div>
