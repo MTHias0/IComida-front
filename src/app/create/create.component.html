@@ -1,23 +1,70 @@
-<div class="login-container d-flex flex-column align-items-center justify-content-center mt-5">
-    <p class="title mb-5">IComida</p>
-    <h2 class="sub-title">Crie sua conta</h2>
-    <form (ngSubmit)="login.form.valid && onSubmit()" #login="ngForm">
-        <div class="container card border-0 shadow align-items-center justify-content-center pt-3 mt-5 px-5">
-            <div class="col form-group">
-                <p class="col bold mt-3 mb-1">Email</p>
-                <input class="col rounded-pill border text-center" type="email" name="email" required placeholder="Insira aqui seu email"/>
-                <p class="col font-weight-bold mt-3 mb-1">Senha</p>
-                <input class="col rounded-pill border text-center" type="password" name="password" required placeholder="Insira aqui sua senha"/>
-            </div>
-            <div class="col form-group">
-                <p class="col bold mt-3 mb-1">Email</p>
-                <input class="col rounded-pill border text-center" type="email" name="email" required placeholder="Insira aqui seu email"/>
-                <p class="col font-weight-bold mt-3 mb-1">Senha</p>
-                <input class="col rounded-pill border text-center" type="password" name="password" required placeholder="Insira aqui sua senha"/>
-            </div>
-            <button routerLink="" type="submit" class="btn btn-danger rounded-pill m-4">
-                Criar conta
-            </button>
-        </div>
-    </form>
+<div
+  class="login-container d-flex flex-column align-items-center justify-content-center mt-5"
+>
+  <p class="title mb-5">IComida</p>
+  <h2 class="sub-title">Crie sua conta</h2>
+  <form (ngSubmit)="login.form.valid && onSubmit()" #login="ngForm">
+    <div
+      class="container card border-0 shadow align-items-center justify-content-center pt-3 mt-5 px-5"
+    >
+      <div class="col form-group">
+        <p class="col bold mt-3 mb-1">Email</p>
+        <input
+          class="col rounded-pill border text-center"
+          required
+          [(ngModel)]="email"
+          type="email"
+          name="email"
+          required
+          placeholder="Insira aqui seu email"
+        />
+        <p class="col font-weight-bold mt-3 mb-1">Senha</p>
+        <input
+          class="col rounded-pill border text-center"
+          required
+          [(ngModel)]="password"
+          type="password"
+          name="password"
+          required
+          placeholder="Insira aqui sua senha"
+        />
+        <p class="col bold mt-3 mb-1">Nome</p>
+        <input
+          class="col rounded-pill border text-center"
+          required
+          [(ngModel)]="name"
+          type="text"
+          name="name"
+          required
+          placeholder="Insira aqui seu nome"
+        />
+        <p class="col bold mt-3 mb-1">Endereço</p>
+        <input
+          class="col rounded-pill border text-center"
+          required
+          [(ngModel)]="address"
+          type="text"
+          name="address"
+          required
+          placeholder="Insira aqui seu endereço"
+        />
+        <p class="col font-weight-bold mt-3 mb-1">Número de telefone</p>
+        <input
+          class="col rounded-pill border text-center"
+          required
+          [(ngModel)]="telNumber"
+          type="text"
+          name="telNumber"
+          required
+          placeholder="Insira aqui seu Número"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-danger rounded-pill m-4"
+      >
+        Criar conta
+      </button>
+    </div>
+  </form>
 </div>

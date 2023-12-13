@@ -8,23 +8,32 @@
       class="card border-0 shadow align-items-center justify-content-center pt-3 mt-5 px-5"
     >
       <div class="form-group">
-        <p class="bold mt-3 mb-1">Email</p>
+        <p class="bold mt-3 mb-1">Nome do prato</p>
         <input
           class="rounded-pill border text-center"
-          type="email"
-          name="email"
-          [(ngModel)]="email"
+          type="text"
+          name="itenName"
+          [(ngModel)]="itemName"
           required
-          placeholder="Insira aqui seu email"
+          placeholder="Insira aqui o nome do prato"
         />
-        <p class="font-weight-bold mt-3 mb-1">Senha</p>
+        <p class="font-weight-bold mt-3 mb-1">Valor</p>
         <input
           class="rounded-pill border text-center"
-          type="password"
-          name="password"
-          [(ngModel)]="password"
+          type="text"
+          name="price"
+          [(ngModel)]="price"
           required
-          placeholder="Insira aqui sua senha"
+          placeholder="Insira o preço do prato"
+        />
+        <p class="font-weight-bold mt-3 mb-1">Tipo de alimento</p>
+        <input
+          class="rounded-pill border text-center"
+          type="text"
+          name="role"
+          [(ngModel)]="role"
+          required
+          placeholder="Jantar, lanche, café da manhã"
         />
       </div>
       <div class="d-flex flex-column text-left m-3 p-2">

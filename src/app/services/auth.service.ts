@@ -15,9 +15,5 @@ export class AuthService {
     const requestOption = { headers: headers, responseType: "json" as 'json' };
 
     return this.http.post<JSON>('http://localhost:3000/restaurant-login', JSON.stringify({ email, password }), requestOption)
-    .subscribe((response: any) => {
-
-      return response
-    });
   }
 }

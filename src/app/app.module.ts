@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FoodComponent } from './food/food.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     HomeComponent,
     CreateComponent,
     ForgotComponent,
-    PerfilComponent
+    PerfilComponent,
+    FoodComponent
   ],
   imports: [
     BrowserModule,

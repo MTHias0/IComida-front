@@ -44,7 +44,8 @@
     </div>
     <div class="row buttons align-items-center mt-4">
         <button  *ngIf="!editMode" (click)="editActive()" class="rounded-pill btn btn-primary mb-3 mt-5 ">Editar perfil</button>
-        <button class="rounded-pill btn btn-danger" routerLink="/login">Sair da conta</button>
+        <button class="rounded-pill btn btn-secondary mb-4" routerLink="../food">Adicionar pratos</button>
+        <button class="rounded-pill btn btn-danger" (clicK)="logout()">Sair da conta</button>
     </div>
 </div>
 

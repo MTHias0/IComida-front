@@ -22,8 +22,11 @@ export class PerfilComponent {
     console.log(this.editMode)
   }
 
+  public logout() {
+    this.router.navigate(['../login']);
+  }
+
   public onCancel(){
     this.editMode = false;
-    this
   }
 }
